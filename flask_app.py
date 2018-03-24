@@ -10,7 +10,7 @@ env = DotEnv(app)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "<h1>Goodnight World!</h1>"
 
 @app.route("/db_uri")
 def config(key):
