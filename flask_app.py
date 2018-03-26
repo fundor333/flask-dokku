@@ -11,7 +11,7 @@ env = DotEnv(app)
 
 @app.route("/")
 def hello():
-    return f"<head><title> goodnight world by flask and dokku</title></head>
+    return f"<head><title> goodnight world by flask and dokku</title></head>"
         f"<h1>Goodnight World!</h1>"
         f"from {os.uname()} "
 
