@@ -1,7 +1,7 @@
 #flask_app.py
 from flask import Flask
 from flask_dotenv import DotEnv
-import platform
+from flask import render_template
 
 import os
 
@@ -11,9 +11,9 @@ env = DotEnv(app)
 
 @app.route("/")
 def hello():
-    return f"<head><title> goodnight world by flask and dokku</title></head>\
-           <h1>Goodnight World!</h1>\
-           from {os.uname()} "
+    dict = {}
+    dict['os_version'] = os.uname()
+    return render_template("base.html", os_version=os.uname())
 
 @app.route("/db_uri")
 def config(key):

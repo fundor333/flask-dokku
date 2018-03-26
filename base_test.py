@@ -14,6 +14,9 @@ class FlaskrTestCase(unittest.TestCase):
     def test_main(self):
         rv = self.app.get('/')
         assert b'World' in rv.data
+    def test_title(self):
+        rv = self.app.get('/')
+        assert b'<title> goodnight world by flask and dokku</title>' in rv.data
 
 
 if __name__ == '__main__':

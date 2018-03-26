@@ -1,0 +1,25 @@
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+function vueload()
+{
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    message: 'Hello Vue!'
+	  }
+	})
+}
+</script>
+
+<head>
+  <title> goodnight world by flask and dokku</title>
+</head>
+<body onload="vueload()">
+   <h1 align=center>Goodnight World!</h1>
+
+   hello sent from {{os_version}}
+   <div id="app">
+     and now a more complicate thing
+     {{ message }}
+   </div>
+</body>
