@@ -11,9 +11,9 @@ env = DotEnv(app)
 
 @app.route("/")
 def hello():
-    return f"<head><title> goodnight world by flask and dokku</title></head>"
-           f"<h1>Goodnight World!</h1>"
-           f"from {os.uname()} "
+    return f"<head><title> goodnight world by flask and dokku</title></head>\
+           <h1>Goodnight World!</h1>\
+           from {os.uname()} "
 
 @app.route("/db_uri")
 def config(key):
