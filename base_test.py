@@ -13,7 +13,7 @@ class FlaskrTestCase(unittest.TestCase):
 
     def test_main(self):
         rv = self.app.get('/')
-        assert b'World' in rv.data
+        assert b'Hello' in rv.data
 
 
 if __name__ == '__main__':

@@ -10,11 +10,7 @@ env = DotEnv(app)
 
 @app.route("/")
 def hello():
-    return "<h1>Goodnight World!</h1>"
-
-@app.route("/db_uri")
-def config(key):
-    return str(os.environ.get('DATABASE_URL'))
+    return "<h1>Hello PyCon9</h1>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
